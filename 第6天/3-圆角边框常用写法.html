@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square {
+            background-color: pink;
+            height: 200px;
+            width: 200px;
+            /* 圆形设置为高度的一半 */
+            border-radius: 50%;
+        }
+
+        .rectangle {
+            background-color: pink;
+            height: 100px;
+            width: 300px;
+            /* 圆角矩形设置为高度的一半 */
+            border-radius: 50px;
+        }
+
+        .radius {
+            background-color: pink;
+            height: 200px;
+            width: 200px;
+            /* 左上 右上 右下 左下  顺时针 */
+            /* 两个数值为对角线 */
+            border-radius: 10px 20px 30px 40px;
+            /* 可分开写四个圆角：border-top-left-radius; */
+        }
+    </style>
+</head>
+
+<body>
+    圆形的做法
+    <div class="square"></div>
+    圆角矩形的做法
+    <div class="rectangle"></div>
+    不同的圆角
+    <div class="radius"></div>
+</body>
+
+</html>

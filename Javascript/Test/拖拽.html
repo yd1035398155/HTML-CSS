@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		div {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			width: 300px;
+			height: 300px;
+			background-color: pink;
+			/* translate(-50%,-50%) 作用是，往上（x轴）,左（y轴）移动自身长宽的 50%，以使其居于中心位置。 */
+			transform: translate(-50%, -50%);
+		}
+
+		div:hover {
+			cursor: move;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <div draggable="true"></div> -->
+	<div></div>
+	<script>
+		var div = document.querySelector("div");
+		// (1)鼠标按下触发事件
+		div.addEventListener("mousedown", function (e) {
+			// 鼠标在盒子内的坐标，求出来就不变了
+			var x = e.pageX - div.offsetLeft;
+			var y = e.pageY - div.offsetTop;
+			// (2)鼠标移动事件
+			document.addEventListener("mousemove", move);
+
+			function move(e) {
+				div.style.left = e.pageX - x + "px";
+				div.style.top = e.pageY - y + "px";
+			}
+			// （3）鼠标弹起事件
+			document.addEventListener("mouseup", function () {
+				// 移除事件
+				document.removeEventListener("mousemove", move);
+			})
+		});
+	</script>
+</body>
+
+</html>

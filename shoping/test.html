@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/animate.js"></script>
+    <style>
+        div {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <button>回到500</button>
+    <button>回到800</button>
+    <span> </span>
+    <script>
+        var span = document.querySelector("span");
+        var btns = document.querySelectorAll("button");
+        btns[0].addEventListener("click", function () {
+            animate(span, 500);
+        })
+        btns[1].addEventListener("click", function () {
+            animate(span, 800, function () {
+                span.style.backgroundColor = "red";
+            });
+        })
+    </script>
+</body>
+
+</html>

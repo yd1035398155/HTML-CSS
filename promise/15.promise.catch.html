@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script>
+		// catch 会对前面所有的reject 统一处理,一般放最后
+		new Promise((resolve, reject) => {
+			// resolve("success")
+			// reject(new Error("promise fail"));
+			throw new Error('fail')
+		}).then(
+			value => {
+				console.log(value);
+			}
+			// reason => {
+			// 	console.log(reason.message);
+			// }
+		).then().catch(e => { console.log(e); })
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

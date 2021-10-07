@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<script>
+	function queue(num) {
+		num.reduce((promise, n) => {
+			return promise.then(_ => {
+				return new Promise(res => {
+					setTimeout(() => {
+						console.log(n);
+						res()
+					}, 1000);
+				})
+			})
+		}, Promise.resolve())
+	}
+	// function p1() {
+	// 	return new Promise(res => {
+	// 		setTimeout(() => {
+	// 			console.log(1);
+	// 			res()
+	// 		}, 1000);
+	// 	})
+	// }
+	// function p2() {
+	// 	return new Promise(res => {
+	// 		setTimeout(() => {
+	// 			console.log(2);
+	// 			res()
+	// 		}, 1000);
+	// 	})
+	// }
+	queue([1, 2, 3, 4, 5])
+</script>
+
+<body>
+
+</body>
+
+</html>

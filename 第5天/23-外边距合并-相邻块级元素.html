@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .damao,
+        .ermao {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        /* 当上面和下面都有盒子时,上面盒子有下边距,下面盒子有上边距,边距叠加,取最大的边距 */
+        /* 这里两个盒子的边距为200px */
+        .damao {
+            margin-bottom: 100px;
+        }
+
+        .ermao {
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="damao">大毛</div>
+    <div class="ermao">二毛</div>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 55px;
+            height: 55px;
+            background-color:rgb(255,103,0);
+            margin: 100px auto;
+        }
+        section{
+            position: relative;
+            left:-55px;
+            width: 110px;
+            height: 55px;
+            transition: left 0.2s;
+        }
+        .mi{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 55px;
+            height: 55px;
+            background: url(https://s02.mifile.cn/assets/static/image/mi-logo.png) no-repeat center;
+        }
+        .home{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 55px;
+            height: 55px;
+            background: url(https://s02.mifile.cn/assets/static/image/mi-home.png) no-repeat center;
+        }
+        .box:hover section{
+            left:0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <section>
+            <div class="mi"></div>
+            <div class="home"></div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		function loadImage(src, resolve, reject) {
+			let img = new Image();
+			img.src = src;
+			img.onload = resolve;
+			img.onerror = reject;
+		}
+		loadImage("./pic.jpeg", () => {
+			console.log("图片加载成功");
+		}, () => {
+			console.log("图片加载失败");
+		})
+		console.log("看看谁快");
+	</script>
+</body>
+
+</html>

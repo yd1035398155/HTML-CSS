@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		class User {
+			constructor(name) {
+				this.name = name;
+			}
+			then(resolve, reject) {
+				let data = pro(this.name);
+				resolve(data);
+			}
+		}
+		function pro(name) {
+			return new Promise((res, rej) => {
+				setTimeout(() => {
+					res(name + "-CQUPT")
+				}, 2000);
+			})
+		}
+		async function get() {
+			let user = await new User("YD");
+			console.log(user);
+		}
+		get();
+	</script>
+</body>
+
+</html>

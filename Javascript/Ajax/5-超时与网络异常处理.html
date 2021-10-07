@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>请求超时与网络异常</title>
+    <style>
+        #result {
+            width: 200px;
+            height: 200px;
+            border: 1px solid pink;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button>发送请求</button>
+    <div id="result"></div>
+
+    <script>
+        var btn = document.querySelector("button");
+        var div = document.querySelector("div");
+        btn.addEventListener("click", function () {
+            var xhr = new XMLHttpRequest();
+            // 设置 延迟两秒操作
+            xhr.timeout = 2000;
+            xhr.ontimeout = function () {
+                alert("超时，请重试！");
+            }
+            xhr.onerror = function () {
+                alert("你的网络似乎开小差了");
+            }
+            xhr.open("get", "http://127.0.0.1:3000/delay");
+            xhr.send();
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    div.innerHTML = xhr.response;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

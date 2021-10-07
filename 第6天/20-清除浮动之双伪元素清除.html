@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            优点：代码更简洁
+            缺点：需要照顾低版本浏览器
+         */
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            /* 如果是block，则before和after的位置关系为上下 */
+            /* table:转换为块级元素，且在一行显示 */
+            display: table;
+        }
+
+        .clearfix:after {
+            clear: both;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .box {
+            width: 800px;
+            border: 1px solid blue;
+            margin: 0 auto;
+        }
+
+        .damao {
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+
+        .ermao {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            float: left;
+        }
+
+        .footer {
+            background-color: black;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div class="damao"></div>
+        <div class="ermao"></div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>

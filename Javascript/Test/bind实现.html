@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		Function.prototype.my_bind = function () {
+			self = this;
+			context = [].shift.call(arguments);
+			args = [].slice.call(arguments);
+			return function () {
+				self.apply(context, [].concat.call(args, [].slice.call(arguments)));
+			}
+		}
+		function fn(x, y) {
+			console.log(this.a, this.b, x, y);
+		}
+		let obj = { a: 100, b: 200 };
+		fn.my_bind(obj, 300, 400)();
+	</script>
+</body>
+
+</html>

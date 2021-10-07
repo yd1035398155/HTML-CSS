@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>取消请求</title>
+</head>
+
+<body>
+    <button>发送请求</button>
+    <button>取消请求</button>
+    <script>
+        var btn = document.querySelectorAll("button");
+        let x = null;
+        // 是否正在发送的标识符
+        var issending = false;
+        btn[0].onclick = function () {
+            // 如果正在发送，则取消请求
+            if (issending) {
+                x.abort();
+            }
+            x = new XMLHttpRequest();
+            // 一旦没有发送且点击了发送，就设为正在发送
+            issending = true;
+            x.open("get", "http://127.0.0.1:3000/delay");
+            x.send();
+            // 判断如果已接受服务器端消息，则发送过程已经结束
+            x.onreadystatechange = function () {
+                if (x.readyState === 4) {
+                    issending = false;
+                }
+            }
+        }
+        btn[1].onclick = function () {
+            x.abort();
+        }
+    </script>
+</body>
+
+</html>

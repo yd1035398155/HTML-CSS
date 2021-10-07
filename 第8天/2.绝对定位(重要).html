@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 无祖先元素或者祖先元素无定位，则按照浏览器定位 */
+        /* 如果祖先元素有定位，则以最近一级有定位的祖先元素为参考 */
+        .grandfather {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            background-color: slateblue;
+        }
+
+        .father {
+            /* 可注释下一行看效果 */
+            /* position: relative; */
+            width: 500px;
+            height: 500px;
+            background-color: skyblue;
+        }
+
+        .son {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grandfather">
+        <div class="father">
+            <div class="son"></div>
+        </div>
+    </div>
+</body>
+
+</html>

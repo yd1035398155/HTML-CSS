@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Post</title>
+    <style>
+        div {
+            width: 200px;
+            height: 150px;
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector("div");
+        div.onmouseenter = function () {
+            // 1.创建对象
+            var xhr = new XMLHttpRequest();
+            // 2.初始化 设置类型与URL
+            xhr.open("post", "http://127.0.0.1:3000/server");
+            // 设置请求头
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.setRequestHeader("name", "YangDong");
+            // 3.发送
+            xhr.send();
+            // 4.事件绑定
+            xhr.onload = function () {
+                if (xhr.status >= 200 & xhr.status < 300) {
+                    // 处理服务端返回的结果
+                    div.innerHTML = xhr.response;
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

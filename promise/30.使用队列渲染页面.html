@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		let data = ["标题1", "标题2"];
+		class User {
+			render(data) {
+				data.reduce((promise, item) => {
+					return promise.then(_ => {
+						return new Promise(res => {
+							setTimeout(() => {
+								res();
+								return this.view(item)
+							}, 2000);
+						})
+					})
+				}, Promise.resolve())
+			}
+			view(data) {
+				return new Promise(res => {
+					let h = document.createElement('h2');
+					h.innerHTML = data;
+					document.body.appendChild(h);
+					res();
+				})
+
+			}
+		}
+
+		new User().render(data)
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+.sk {
+    position: absolute;
+    top: 40px;
+    left: 185px;
+    border-left: 1px solid #c51623;
+}
+
+.nav {
+    line-height: 47px;
+    overflow: hidden;
+}
+
+.sk_list {
+    float: left;
+}
+
+.sk_list a {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0 30px;
+}
+
+.sk_con {
+    float: right;
+
+}
+
+.sk_con ul li {
+    float: left;
+}
+
+.sk_con ul li a {
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+.sk_con ul li:last-child a::after {
+    content: "\e91e";
+    font-family: "icomoon";
+}
+
+.sk_container img {
+    width: 100%;
+}
+
+.sk_bd ul li {
+    float: left;
+    width: 290px;
+    height: 460px;
+    overflow: hidden;
+    border: 1px solid transparent;
+    margin-right: 13px;
+}
+
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.sk_bd ul li:hover {
+    border: 1px solid #c51623;
+}
+
+.sk_bd ul li img {
+    height: 100%;
+}

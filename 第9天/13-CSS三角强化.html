@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .price {
+            width: 160px;
+            height: 24px;
+            border: 1px solid red;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .now {
+            position: relative;
+            float: left;
+            width: 90px;
+            height: 100%;
+            background-color: red;
+        }
+
+        .before {
+            float: right;
+            width: 70px;
+            height: 100%;
+            text-decoration: line-through;
+            color: grey;
+        }
+
+        .price .now i {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 0;
+            border-width: 24px 8px 0 0;
+            border-style: solid;
+            border-color: transparent white transparent transparent;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="price">
+        <span class="now">
+            $1650
+            <i></i>
+        </span>
+        <span class="before">$5650</span>
+    </div>
+
+</body>
+
+</html>

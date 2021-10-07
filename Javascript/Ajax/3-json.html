@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax-Json</title>
+    <style>
+        div {
+            width: 200px;
+            height: 150px;
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector("div");
+        // 绑定事件
+        window.onkeydown = function () {
+            // 1.发送请求
+            var xhr = new XMLHttpRequest();
+            xhr.responseType = "json";
+            // 2.初始化
+            xhr.open("get", "http://127.0.0.1:3000/json-server");
+            // 3.发送请求
+            xhr.send();
+            // 4.响应事件
+            xhr.onload = function () {
+                if (xhr.status >= 200 & xhr.status < 300) {
+                    // var data = JSON.parse(xhr.response)
+                    console.log(xhr.response);
+                    // div.innerHTML = data.name;
+                    div.innerHTML = xhr.response.name;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

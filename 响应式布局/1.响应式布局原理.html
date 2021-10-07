@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./style.css">
+	<style>
+		.container {
+			height: 500px;
+			background-color: skyblue;
+			margin: 0 auto;
+		}
+
+		/* 后面的会把前面的覆盖掉 */
+		/* 1.小于768  宽度为100% */
+		@media screen and (max-width: 768px) {
+			.container {
+				width: 100%;
+			}
+		}
+
+		/* 2.大于768  宽度为750px */
+		@media screen and (min-width: 768px) {
+			.container {
+				width: 750px;
+			}
+		}
+
+		/* 3.大于992px 修改为970px */
+		@media screen and (min-width: 992px) {
+			.container {
+				width: 970px;
+			}
+		}
+
+		/* 3.大于1200px 修改为1170px */
+		@media screen and (min-width: 1200px) {
+			.container {
+				width: 1170px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+
+	</div>
+</body>
+
+</html>

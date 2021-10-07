@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(245,245,245);
+        }
+        .box{
+            width: 280px;
+            height: 370px;
+            background-color:rgb(255,255,255);
+            margin: 100px auto;
+        }
+        
+        .image {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        p{
+            font-size: 14px;
+            color: #333;
+            font-weight: 400;
+            padding-left: 10px;
+            margin: 10px 0;
+        }
+        .price{
+            margin-left: 10px;
+        }
+        .price :nth-child(1){
+            color: #ff6700;
+            font-size: 18px;
+        }
+        .price :nth-child(2){
+            color:#b0b0b0;
+            text-decoration: line-through;
+            font-size: 12px;
+        }
+        .bar{
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 10px;
+        }
+        .bar .bar_in{
+            display: inline-block;
+            border: 1px solid red;
+            width: 150px;
+            height: 10px;
+            border-radius: 10px;
+        }
+        .bar .bar_in .bar_out{
+            width: 87%;
+            height: 10px;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            background-color: red;
+            
+        }
+        footer{
+            width: 240px;
+            height: 50px;
+            background-color:rgb(188,40,24);
+            line-height: 50px;
+            text-align: center;
+            color: #fff;
+            font-size: 20px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <section class="image">
+            <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/b3553083a4975325eab6470d94465548.jpg?thumb=1&w=180&h=180&f=webp&q=90" alt="">
+        </section>
+        <p>Apple苹果iPhone 6s Plus ( A1699 ) 32G <br>金色移动联通电信4G手机</p>
+        <section class="price">
+            <span>￥6088</span>
+            <span>￥6988</span>
+        </section>
+        <div class="bar">
+            已售<span>87%</span>
+            <div class="bar_in">
+                <div class="bar_out"></div>
+            </div> 
+            剩余<span>29</span>件
+        </div>
+        <footer>立即抢购</footer>
+    </div>
+</body>
+</html>

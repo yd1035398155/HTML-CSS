@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            padding: 20px;
+            border: 10px solid red;
+            /* 默认值 */
+            box-sizing: content-box;
+        }
+        p{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            padding: 20px;
+            border: 10px solid red;
+            /* 使用之后，固定盒子大小，自动减去padding border的值 */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <p></p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="demo.php">
+         <!--text 文本框 用户可在框内输入任何文字-->
+         <!--maxlength 输入的长度限制-->
+        用户名：<input type="text" name="username" value="请输入用户名" maxlength="5"> <br>
+        <!--文件域 上传文件使用-->
+        上传头像：<input type="file"><br>
+         <!--password 密码框  用掩码来代替文字-->
+        密码：<input type="password" name="pwd"> <br>
+         <!--radio 单选按钮  可实现多选-->
+         <!--单选按钮和复选框各自的name必须相同-->
+         <!--单选和复选框可以checked属性，当页面打开时默认选中这个按钮-->
+        性别： 男 <input type="radio" name="sex" value="男" checked="checked"> 女 <input type="radio" name="sex" value=“女> <br>
+         <!--checkbox 复选框  可实现多选-->
+        爱好： 吃饭 <input type="checkbox" name="hobby" value="吃饭"> 睡觉 <input type="checkbox" name="hobby" value="睡觉">  
+        打豆豆 <input type="checkbox" name="hobby" value="打豆豆"><br>
+        <!--提交按钮 可以把表单信息提交给后台-->
+        <input type = "submit" value = "免费注册"><br>
+        <!--重置按钮 恢复表单的默认状态-->
+        <input type = "reset" value="重新填写"><br>
+        <!--普通按钮 后期搭配JS使用-->
+        <input type="button" value="发送短信验证码"><br>
+    </form>
+</body>
+</html>

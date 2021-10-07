@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+	// 返回最快的promise 
+	const A = new Promise((res, rej) => {
+		setTimeout(() => {
+			res("第一个异步")
+			// rej("失败")
+		}, 2000);
+	})
+	const B = new Promise((res, rej) => {
+		setTimeout(() => {
+			res("第二个异步")
+		}, 1000);
+	})
+	Promise.race([A, B]).then(value => {
+		console.log(value);
+	}).catch(e => {
+		console.log(e);
+	})
+</script>
+
+</html>

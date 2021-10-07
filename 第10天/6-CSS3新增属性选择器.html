@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* 1.E[att] 选择具有att属性的E元素 */
+		/* input[value]{
+            color:pink;
+        } */
+
+		/* 2.重点掌握，E[att=val] 选择具有att属性且att=val的E元素 */
+		input[type=text] {
+			color: plum;
+		}
+
+		/* 3.E[att^="val"] 匹配具有att属性且以val开头的E元素 */
+		div[class^=icon] {
+			color: skyblue;
+		}
+
+		/* 4.E[att$="val"] 匹配具有att属性且以val结尾的E元素 */
+		section[class$="date"] {
+			color: slateblue;
+		}
+
+		/* 5.E[att*=val]  匹配具有att属性且值中有val的E元素*/
+	</style>
+</head>
+
+<body>
+	<!-- <input type="text" name="" id="" value="请输入用户名"> -->
+
+	<input type="text" name="" id="">
+	<input type="password" name="" id="">
+
+	<div class="icon1">图标1</div>
+	<div class="icon2">图标2</div>
+	<div class="icon3">图标3</div>
+	<div class="icon4">图标4</div>
+
+	<section class="icon1-date">我是安琪拉</section>
+	<section class="icon2-date">我是哥斯拉</section>
+	<section class="icon3-ddd">我是谁</section>
+
+</body>
+
+</html>

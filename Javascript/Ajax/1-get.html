@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Get</title>
+    <style>
+        #result {
+            width: 200px;
+            height: 150px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button>提交</button>
+    <div id="result"></div>
+
+
+    <script>
+        var btn = document.querySelector("button");
+        var result = document.querySelector("div");
+        btn.onclick = function () {
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://127.0.0.1:2000/server?a=100&b=200");
+            xhr.send();
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    result.innerHTML = xhr.response;
+                }
+
+            }
+        }
+    </script>
+</body>
+
+</html>

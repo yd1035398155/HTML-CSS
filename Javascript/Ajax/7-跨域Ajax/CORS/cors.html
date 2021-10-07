@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORS</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button>提交</button>
+    <div></div>
+
+    <script>
+        // 获取按钮
+        var btn = document.querySelector("button");
+        var div = document.querySelector("div");
+        // 绑定事件
+        btn.onclick = function () {
+            // 1.创建Ajax,xml
+            var xml = new XMLHttpRequest();
+            // 2.初始化
+            xml.open("get", "http://127.0.0.1:3000/cors");
+            // 3.发送
+            xml.send();
+            // 4.绑定事件
+            xml.onload = function () {
+                // 判断status
+                if (xml.status >= 200 && xml.status < 300) {
+                    // 更改innerHTML
+                    div.innerHTML = xml.response;
+                }
+
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

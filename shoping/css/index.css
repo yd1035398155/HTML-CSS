@@ -1,0 +1,377 @@
+.main {
+    width: 980px;
+    height: 455px;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+.focus {
+    position: relative;
+    float: left;
+    width: 720px;
+    height: 455px;
+    background-color: slateblue;
+    overflow: hidden;
+}
+
+.focus ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600%;
+}
+
+.focus ul li {
+    float: left;
+    width: 720px;
+}
+
+.focus ul li img {
+    width: 100%;
+}
+
+.arrow-l,
+.arrow-r {
+    display: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 24px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-family: "icomoon";
+    font-size: 18px;
+    z-index: 99;
+}
+
+.arrow-r {
+    right: 0;
+}
+
+.circle {
+    position: absolute;
+    left: 40px;
+    bottom: 20px;
+}
+
+.circle li {
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin: 0 8px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+
+.current {
+    background-color: #fff;
+}
+
+.newflash {
+    float: right;
+    width: 250px;
+    height: 455px;
+
+}
+
+.news {
+    height: 165px;
+    border: 1px solid #ccc;
+}
+
+.lifeservice {
+    overflow: hidden;
+    height: 210px;
+    border: 1px solid #ccc;
+    border-top: 0;
+}
+
+.lifeservice ul {
+    width: 252px;
+}
+
+.lifeservice ul li {
+    float: left;
+    width: 63px;
+    height: 71px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.lifeservice ul li i {
+    display: inline-block;
+    background: url(../images/icons.png) no-repeat -17px -14px;
+    width: 24px;
+    height: 28px;
+    margin-top: 12px;
+}
+
+.lifeservice ul .less {
+    position: relative;
+}
+
+.lifeservice ul .less::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 17px;
+    background: url(../images/less.png);
+}
+
+
+.bargain {
+    margin-top: 5px;
+}
+
+.news-hd {
+    height: 33px;
+    line-height: 33px;
+    padding: 0 15px;
+    border-bottom: 1px dotted #ccc;
+}
+
+.news-hd h5 {
+    float: left;
+    font-size: 14px;
+}
+
+.news-hd .more {
+    float: right;
+}
+
+.news-hd .more::after {
+    font-family: 'icomoon';
+    content: '\e920';
+}
+
+.news-bd {
+    padding: 5px 0px 0 15px;
+}
+
+.news-bd ul li {
+    height: 25px;
+    line-height: 25px;
+    /* 1.强制一行显示 */
+    white-space: nowrap;
+    /* 2.溢出的部分隐藏,必须在条件1下执行 */
+    overflow: hidden;
+    /* 3.溢出部分用省略号显示，须在条件1,2下执行 */
+    text-overflow: ellipsis;
+}
+
+.news-bd ul li span {
+    font-weight: 700;
+}
+
+/* 推荐模块 */
+.recom {
+    height: 163px;
+    background-color: #ebebeb;
+    margin-top: 12px;
+    text-align: center;
+}
+
+.recom-hd {
+    float: left;
+    width: 206px;
+    height: 100%;
+    background-color: #5c5251;
+    padding-top: 30px;
+}
+
+.recom-hd img {
+    height: 57px;
+    width: 57px;
+}
+
+.recom-hd p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px
+}
+
+.recom-bd {
+    float: left;
+}
+
+.recom-bd ul li {
+    position: relative;
+    float: left;
+}
+
+.recom-bd ul li img {
+    width: 248px;
+    height: 163px;
+}
+
+.recom-bd ul li:nth-child(-n+3):after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 1px;
+    height: 145px;
+    background-color: #ddd;
+}
+
+.fav {
+    height: 275px;
+    margin-top: 20px;
+}
+
+.fav-hd {
+    height: 40px;
+    line-height: 40px;
+}
+
+.fav-hd span {
+    float: left;
+    font-size: 18px;
+}
+
+.fav-hd i a::after {
+    content: "\ea2e";
+    font-family: "icomoon";
+    margin: 0 20px 0 10px;
+}
+
+.fav-hd i {
+    float: right;
+}
+
+.fav-bd {
+    height: 235px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.fav-bd ul {
+    width: 1202px;
+}
+
+.fav-bd ul li {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 232px;
+    padding: 20px 0 0 35px;
+}
+
+.fav-bd ul li p {
+    height: 20px;
+    line-height: 20px;
+}
+
+.fav-bd ul li::after {
+    content: "";
+    position: absolute;
+    bottom: 13px;
+    right: 0;
+    width: 1px;
+    height: 70px;
+    background-color: #ededed;
+}
+
+.fav-bd ul li span {
+    color: #df3033;
+}
+
+.fav-bd ul li i {
+    color: #df3033;
+    font-size: 18px;
+}
+
+/* 家电楼层 */
+.box_hd {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 2px solid #c81623;
+    margin-top: 30px;
+}
+
+.box_hd h4 {
+    float: left;
+    font-size: 18px;
+    color: #c81623;
+}
+
+.box_hd .tab_list {
+    float: right;
+}
+
+.box_hd .tab_list ul li {
+    float: left;
+}
+
+.box_hd .tab_list ul li a {
+    padding: 0 15px;
+}
+
+.box_bd {
+    height: 361px;
+}
+
+/* .tab_content {
+    border: 1px solid #ccc;
+} */
+
+.tab_content .tab_list_item>div {
+    float: left;
+    height: 361px;
+}
+
+.tab_content .tab_list_item div:nth-child(1) {
+    width: 210px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.tab_content .tab_list_item div:nth-child(1) ul {
+    padding-left: 12px;
+    margin-bottom: 22px;
+}
+
+.tab_content .tab_list_item div:nth-child(1) ul li {
+    float: left;
+    width: 85px;
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.tab_content .tab_list_item div:nth-child(2) {
+    width: 329px;
+
+}
+
+.tab_content .tab_list_item div:nth-child(3) {
+    width: 221px;
+
+}
+
+.tab_content .tab_list_item div:nth-child(4) {
+    width: 221px;
+}
+
+.tab_content .tab_list_item div:nth-child(5) {
+    width: 219px;
+
+}
+
+.tab_content .tab_list_item div:nth-child(5) img {
+    width: 219px;
+    height: 180px;
+}
+
+.bb {
+    display: block;
+    border-bottom: 1px solid #ccc;
+}

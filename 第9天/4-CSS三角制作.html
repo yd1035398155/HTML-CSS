@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 0;
+            height: 0;
+            border-top: 50px solid pink;
+            border-right: 50px solid red;
+            border-bottom: 50px solid blue;
+            border-left: 50px solid green;
+        }
+
+        .box2 {
+            width: 0;
+            height: 0;
+            border: 50px solid transparent;
+            border-top: 50px solid red;
+
+        }
+
+        .jd {
+            position: relative;
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .jd span {
+            position: absolute;
+            top: -16px;
+            left: 60px;
+            width: 0;
+            height: 0;
+            border: 8px solid transparent;
+            border-bottom: 8px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="jd"><span></span></div>
+</body>
+
+</html>

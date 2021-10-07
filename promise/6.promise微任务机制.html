@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		// pendding 准备阶段
+		// resolved 成功状态
+		// rejected 拒绝状态
+		console.log(new Promise((resolve, reject) => {
+		}));
+		console.log(new Promise((resolve, reject) => {
+			resolve("成功状态")
+		}));
+		console.log(new Promise((resolve, reject) => {
+			// reject("拒绝状态")
+			resolve("成功状态")
+		}).then(value => {
+			console.log("成功处理业务1");
+		}, reason => {
+			console.log('拒绝业务处理');
+		}).then(value => {
+			console.log("成功处理业务2");
+		}, reason => {
+			console.log('拒绝业务处理');
+		})
+		);
+	</script>
+</body>
+
+</html>

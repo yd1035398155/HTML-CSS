@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+	<script>
+
+		function add(x) {
+			return x + 10;
+		}
+		function mul(x) {
+			return x * 10;
+		}
+		function compose(...func) {
+			return function (...num) {
+				let len = func.length;
+				if (len === 0) return num;
+				else if (len === 1) return func[0](...num);
+				else {
+					return func.reduce((x, y) => {
+						return y(x(...num))
+					})
+				}
+			}
+		}
+		console.log(compose(add, mul)(10));//11
+	</script>
+</body>
+
+</html>

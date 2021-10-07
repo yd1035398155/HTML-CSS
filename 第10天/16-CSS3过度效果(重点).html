@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		/* 谁过度，给谁加 */
+		div {
+			width: 200px;
+			height: 100px;
+			background-color: pink;
+			/* transition: 变化的属性 变化时间 运动曲线(默认ease，可以忽略) 何时开始(默认0s，可以忽略) */
+			/* transition: width 1s ease .5s; */
+			/* 多个属性变化 */
+			/* transition: width 1s,height 1s; */
+			/* 所有属性都变化 */
+			transition: all 1s;
+		}
+
+		div:hover {
+			width: 400px;
+			height: 200px;
+			background-color: skyblue;
+		}
+	</style>
+</head>
+
+<body>
+	<div></div>
+</body>
+
+</html>

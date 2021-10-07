@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		/*
+		 Promise中,如果同时存在resolve和reject,看谁先执行,后面的无效
+		*/
+		let p = new Promise((resolve, reject) => {
+			// resolve("成功")
+			setTimeout(() => { reject("拒绝") }, 2000)
+			console.log("1");
+		})
+		new Promise((resolve, reject) => {
+			console.log("2");
+			resolve(p)
+		}).then(
+			msg => {
+				console.log('成功');
+				console.log(msg);
+			},
+			err => {
+				console.log('失败');
+				console.log(err);
+			}
+		)
+		console.log("start");
+	</script>
+</body>
+
+</html>

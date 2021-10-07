@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		#box-container {
+			background: gray;
+			display: flex;
+			height: 500px;
+			/* 
+			center:居中排列
+			flex-start：从 flex 容器的起始位置开始排列项目。 
+			flex-end：从 flex 容器的终止位置开始排列项目。 
+			space-between：项目间保留一定间距地沿主轴居中排列。 第一个和最后一个项目被放置在容器边沿。 
+			space-around：与space-between相似，但头尾两个项目不会紧贴容器边缘，所有项目之间的空间均匀排布。
+			space-evenly：头尾两个项目不会紧贴容器边缘，所有项目之间的空间均匀排布。 */
+			justify-content: space-evenly;
+		}
+
+		#box-1 {
+			background-color: dodgerblue;
+			width: 25%;
+			height: 100%;
+		}
+
+		#box-2 {
+			background-color: orangered;
+			width: 25%;
+			height: 100%;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box-container">
+		<div id="box-1"></div>
+		<div id="box-2"></div>
+	</div>
+</body>
+
+</html>

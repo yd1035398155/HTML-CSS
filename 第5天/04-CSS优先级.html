@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 权重从小到大排列：继承<元素选择器<类选择器<id选择器<行内样式表， */
+        /* 注意：继承的权重为0 */
+        body {
+            color: red;
+        }
+
+        div {
+            color: orange !important;
+        }
+
+        .nav {
+            color: yellow;
+        }
+
+        #name {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav" id="name" style="color: blue;">你笑起来真好看</div>
+</body>
+
+</html>

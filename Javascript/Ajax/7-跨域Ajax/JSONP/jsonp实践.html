@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    用户名：<input type="text">
+    <p></p>
+    <script>
+        // 获取元素
+        var input = document.querySelector("input");
+        var p = document.querySelector("p");
+        // 声明handle函数
+        function handle(data) {
+            input.style.border = "1px solid red";
+            p.innerHTML = data.msg;
+        }
+        // 绑定事件（失去焦点时）
+        input.onblur = function () {
+            // 获取用户名
+            var username = this.value;
+            // 创建script标签
+            var script = document.createElement("script");
+            // 绑定src
+            script.src = "http://127.0.0.1:3000/username";
+            // 插入文档
+            document.body.appendChild(script);
+        }
+    </script>
+</body>
+
+</html>

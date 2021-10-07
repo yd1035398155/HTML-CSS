@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .window {
+            position: relative;
+            width: 444px;
+            height: 320px;
+            margin: 20px auto;
+            background-color: pink;
+        }
+
+        .window img {
+            width: 100%;
+            height: 100%;
+        }
+        .window::before{
+            content: '';
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 0;
+            width: 444px;
+            height: 320px;
+            background: rgba(0, 0, 0, .4) url('D:\\编程软件\\前端学习\\案例\\第8天\\images\\arr.png') no-repeat center;
+        }
+        /* 鼠标经过Window,让里面的before执行display */
+        .window:hover::before {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="window">
+        <img src="D:\\编程软件\\前端学习\\案例\\第8天\\images\\tudou.jpg" alt="">
+    </div>
+    <div class="window">
+        <img src="D:\\编程软件\\前端学习\\案例\\第8天\\images\\tudou.jpg" alt="">
+    </div>
+    <div class="window">
+        <img src="D:\\编程软件\\前端学习\\案例\\第8天\\images\\tudou.jpg" alt="">
+    </div>
+</body>
+
+</html>
