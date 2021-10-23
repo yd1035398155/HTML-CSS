@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
+  <body>
+    <script>
+      // // 基本形式
+      // new Promise((resolve, reject) => {
+      // 	console.log("CQUPT");
+      // 	resolve("YD");
+      // }).then(res => {
+      // 	console.log(res);
+      // })
 
-<body>
-	<script>
-		// // 基本形式
-		// new Promise((resolve, reject) => {
-		// 	console.log("CQUPT");
-		// 	resolve("YD");
-		// }).then(res => {
-		// 	console.log(res);
-		// })
+      // // fulfilled状态的Promise
+      // async function hd() { }
+      // console.log(hd());
 
-		// // fulfilled状态的Promise 
-		// async function hd() { }
-		// console.log(hd());
+      async function fn() {
+        return new Promise((res) => {
+          setTimeout(() => {
+            res("YD")
+          }, 1000)
+        })
+      }
+      fn().then((v) => {
+        console.log(v)
+      })
 
-		async function fn() {
-			return new Promise(res => {
-				setTimeout(() => {
-					res("YD");
-				}, 1000);
-			})
-		}
-		fn().then(v => {
-			console.log(v);
-		})
-
-
-		// async function fn() {
-		// 	let name = await new Promise(res => {
-		// 		setTimeout(() => {
-		// 			res("CQUPT");
-		// 		}, 2000);
-		// 	})
-		// 	let myname = await new Promise(res => {
-		// 		setTimeout(() => {
-		// 			res("YD");
-		// 		}, 2000);
-		// 	})
-		// 	console.log(name + ":" + myname);
-		// }
-		// fn()
-	</script>
-</body>
-
+      // async function fn() {
+      // 	let name = await new Promise(res => {
+      // 		setTimeout(() => {
+      // 			res("CQUPT");
+      // 		}, 2000);
+      // 	})
+      // 	let myname = await new Promise(res => {
+      // 		setTimeout(() => {
+      // 			res("YD");
+      // 		}, 2000);
+      // 	})
+      // 	console.log(name + ":" + myname);
+      // }
+      // fn()
+    </script>
+  </body>
 </html>
